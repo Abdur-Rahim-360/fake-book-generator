@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fake Book Generator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>📚 Fake Book Generator</h1>
+
+  <div class="controls">
+    <label>Locale:
+      <select id="locale">
+        <option value="en_US">English (USA)</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+      </select>
+    </label>
+
+    <label>Seed: <input type="text" id="seed" /></label>
+    <button id="randomSeedBtn">Random Seed</button>
+
+    <label>Average Reviews: <input type="number" id="avgReviews" value="2.7" /></label>
+    <label>Average Likes: <input type="number" id="avgLikes" value="3.7" /></label>
+    <button id="generateBtn">Generate Books</button>
+  </div>
+
+  <table id="booksTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Likes</th>
+        <th>Reviews</th>
+        <th>Locale</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/faker@5.5.3/dist/faker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/seedrandom"></script>
+  <script src="script.js"></script>
+</body>
+</html>
